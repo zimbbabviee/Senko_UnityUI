@@ -11,6 +11,7 @@ public class ImageScript : MonoBehaviour
     public Sprite[] knightInventory;
     public Sprite[] pirateInventory;
     public GameObject[] inventoryImageHolders;
+    public GameObject[] inventoryOnCharacter;
 
     public void changeImage(int index)
     {
