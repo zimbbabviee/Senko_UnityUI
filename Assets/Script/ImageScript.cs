@@ -13,6 +13,9 @@ public class ImageScript : MonoBehaviour
     public GameObject[] inventoryImageHolders;
     public GameObject[] inventoryOnCharacter;
 
+    public GameObject sizeSliderWidth;
+    public GameObject sizeSliderLength;
+
     public void changeImage(int index)
     {
         if (index == 0)
@@ -54,6 +57,18 @@ public class ImageScript : MonoBehaviour
         inventoryImageHolders[6].SetActive(value);
         inventoryImageHolders[7].SetActive(value);
         inventoryImageHolders[8].SetActive(value);
+    }
+
+    public void changeWidth()
+    {
+        float size = sizeSliderWidth.GetComponent<Slider>().value;
+        imageHolder.transform.localScale = new Vector2(1F * size, imageHolder.transform.localScale.y);
+    }
+
+    public void changeLength()
+    {
+        float size = sizeSliderLength.GetComponent<Slider>().value;
+        imageHolder.transform.localScale = new Vector2(imageHolder.transform.localScale.x, 1F * size);
     }
 
 }
